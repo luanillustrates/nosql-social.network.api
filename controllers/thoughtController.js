@@ -69,7 +69,7 @@ module.exports = {
         res.status(404).json({ message: 'no reaction with given ID' });
       }
       await Reaction.deleteMany({ _id: { $in: Reaction.User } });
-      res.json({ message: 'reaction delete' });
+      res.json({ message: 'reaction deleted' });
     } catch (err) {
       res.status(500).json(err);
     }
